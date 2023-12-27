@@ -11,5 +11,3 @@ Features buttons to connect to GitHub, LinkedIn, open an Outlook mail, and acces
 The GUI was designed in QT Designer, and the program utilizes PyQt5 for GUI development and SQL Server Management Studio for database operations. It also integrates web and email functionalities.
 
 Warning: Please note that the server name in the authentication page should be changed according to the user's server.
-
-Feel free to customize the content as per your requirements.
