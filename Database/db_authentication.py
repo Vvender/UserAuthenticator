@@ -15,7 +15,7 @@ class UserDatabase:
             # Do not forget to change Server name according to your server name
             self.connection = pyodbc.connect(
                 'Driver={SQL Server};'
-                'Server=DESKTOP-FNO1431\\SQLEXPRESS;'
+                'Server="YOUR SERVER NAME";'
                 f'Database={database};'  # Connect directly to the UserAuthentication database
                 'Trusted_connection=yes;',
                 autocommit=True  # Set autocommit to True to prevent multi-statement transactions
