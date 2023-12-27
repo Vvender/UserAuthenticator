@@ -1,0 +1,14 @@
+<RCC>
+  <qresource prefix="Icons">
+    <file>acces_granted.jpg</file>
+    <file>chevron-down.svg</file>
+    <file>clipboard.svg</file>
+    <file>code.svg</file>
+    <file>eye.svg</file>
+    <file>eye-off.svg</file>
+    <file>linkedin.svg</file>
+    <file>mail.svg</file>
+    <file>maximize-2 .svg</file>
+    <file>x.svg</file>
+  </qresource>
+</RCC>

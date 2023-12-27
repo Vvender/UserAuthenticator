@@ -1,0 +1,856 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Login</class>
+ <widget class="QWidget" name="Login">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>450</width>
+    <height>550</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>450</width>
+    <height>550</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>450</width>
+    <height>550</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="mainBody" native="true">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>40</y>
+     <width>370</width>
+     <height>480</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <widget class="QLabel" name="lbl_frame_back">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>39</y>
+      <width>281</width>
+      <height>421</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:#2596be;
+border-radius:20px;
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_frame_middle">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>39</y>
+      <width>281</width>
+      <height>421</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:0.715909,stop:0 rgba(0,0,0,9), stop:0.375 rgba(0,0,0,50),stop:0.835227 rgba(0,0,0,75));
+border-radius:20px;
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_frame_front">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>50</y>
+      <width>261</width>
+      <height>401</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:rgba(0,0,0,100);
+border-radius:15px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_git">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>400</y>
+      <width>32</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#btn_git{
+	background-color: transparent;
+	color:rgba(255, 255, 255, 210);
+	border-radius:5px;
+}
+QPushButton#btn_git:hover{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(40, 67, 98, 219), stop:1 rgba(105, 118, 132, 226));
+}
+QPushButton#btn_git:pressed{
+	padding-left:5px;
+	padding-top:5px;
+	background-color:rgba(105, 118, 132, 200);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="Icons/login.qrc">
+      <normaloff>:/Icons/code.svg</normaloff>:/Icons/code.svg</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_linkedin">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>400</y>
+      <width>32</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#btn_linkedin{
+	background-color: transparent;
+	color:rgba(255, 255, 255, 210);
+	border-radius:5px;
+}
+QPushButton#btn_linkedin:hover{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(40, 67, 98, 219), stop:1 rgba(105, 118, 132, 226));
+}
+QPushButton#btn_linkedin:pressed{
+	padding-left:5px;
+	padding-top:5px;
+	background-color:rgba(105, 118, 132, 200);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="Icons/login.qrc">
+      <normaloff>:/Icons/linkedin.svg</normaloff>:/Icons/linkedin.svg</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_email">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>400</y>
+      <width>32</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#btn_email{
+	background-color: transparent;
+	color:rgba(255, 255, 255, 210);
+	border-radius:5px;
+}
+QPushButton#btn_email:hover{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(40, 67, 98, 219), stop:1 rgba(105, 118, 132, 226));
+}
+QPushButton#btn_email:pressed{
+	padding-left:5px;
+	padding-top:5px;
+	background-color:rgba(105, 118, 132, 200);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="Icons/login.qrc">
+      <normaloff>:/Icons/mail.svg</normaloff>:/Icons/mail.svg</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_cv">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>400</y>
+      <width>32</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#btn_cv{
+	background-color: transparent;
+	color:rgba(255, 255, 255, 210);
+	border-radius:5px;
+}
+QPushButton#btn_cv:hover{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(40, 67, 98, 219), stop:1 rgba(105, 118, 132, 226));
+}
+QPushButton#btn_cv:pressed{
+	padding-left:5px;
+	padding-top:5px;
+	background-color:rgba(105, 118, 132, 200);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="Icons/login.qrc">
+      <normaloff>:/Icons/clipboard.svg</normaloff>:/Icons/clipboard.svg</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_minimize">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>60</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="Icons/login.qrc">
+      <normaloff>:/Icons/chevron-down.svg</normaloff>:/Icons/chevron-down.svg</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_expand">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>60</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16</width>
+      <height>16</height>
+     </size>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="Icons/login.qrc">
+      <normaloff>:/Icons/maximize-2 .svg</normaloff>:/Icons/maximize-2 .svg</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_exit">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>60</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="Icons/login.qrc">
+      <normaloff>:/Icons/x.svg</normaloff>:/Icons/x.svg</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QStackedWidget" name="pages">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>140</y>
+      <width>241</width>
+      <height>251</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:qlineargradient(spread:pad,x1:0,y1:0,x2:0,y2:0.715909,stop:0 rgba(0,0,0,9), stop:0.375 rgba(0,0,0,25),stop:0.835227 rgba(0,0,0,25));
+border-radius:40px;</string>
+    </property>
+    <property name="currentIndex">
+     <number>2</number>
+    </property>
+    <widget class="QWidget" name="login_page">
+     <widget class="QPushButton" name="btn_lgn_register">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>200</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#btn_lgn_register{
+	background-color: transparent;
+	color:rgba(255, 255, 255, 210);
+	border-radius:5px;
+}
+QPushButton#btn_lgn_register:hover{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(40, 67, 98, 219), stop:1 rgba(105, 118, 132, 226));
+}
+QPushButton#btn_lgn_register:pressed{
+	padding-left:5px;
+	padding-top:5px;
+	background-color:rgba(105, 118, 132, 200);
+}</string>
+      </property>
+      <property name="text">
+       <string>Register</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_lgn_login">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>150</y>
+        <width>200</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#btn_lgn_login{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(20, 47, 78, 219), stop:1 rgba(85, 98, 112, 226));
+	color:rgba(255, 255, 255, 210);
+	border-radius:5px;
+}
+QPushButton#btn_lgn_login:hover{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(40, 67, 98, 219), stop:1 rgba(105, 118, 132, 226));
+}
+QPushButton#btn_lgn_login:pressed{
+	padding-left:5px;
+	padding-top:5px;
+	background-color:rgba(105, 118, 132, 200);
+}</string>
+      </property>
+      <property name="text">
+       <string>Log In</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="line_lgn_password">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>85</y>
+        <width>200</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(0,0,0,0);
+border:none;
+border-bottom:2px solid rgba(105,1118,132,255);
+color:rgba(255,255,255,230);
+padding-bottom:7px;</string>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>Password</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="line_lgn_userName">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>25</y>
+        <width>200</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(0,0,0,0);
+border:none;
+border-bottom:2px solid rgba(105,1118,132,255);
+color:rgba(255,255,255,230);
+padding-bottom:7px;</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>User Name</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_lgn_info">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>200</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#btn_lgn_info{
+	background-color: transparent;
+	color:rgba(255, 255, 255, 210);
+	border-radius:5px;
+}
+QPushButton#btn_lgn_info:hover{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(40, 67, 98, 219), stop:1 rgba(105, 118, 132, 226));
+}
+QPushButton#btn_lgn_info:pressed{
+	padding-left:5px;
+	padding-top:5px;
+	background-color:rgba(105, 118, 132, 200);
+}</string>
+      </property>
+      <property name="text">
+       <string>Info</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="info_page">
+     <widget class="QPushButton" name="btn_info_return">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>190</y>
+        <width>221</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#btn_info_return{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(20, 47, 78, 219), stop:1 rgba(85, 98, 112, 226));
+	color:rgba(255, 255, 255, 210);
+	border-radius:5px;
+}
+QPushButton#btn_info_return:hover{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(40, 67, 98, 219), stop:1 rgba(105, 118, 132, 226));
+}
+QPushButton#btn_info_return:pressed{
+	padding-left:5px;
+	padding-top:5px;
+	background-color:rgba(105, 118, 132, 200);
+}</string>
+      </property>
+      <property name="text">
+       <string>RETURN</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_info_message">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>221</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgba(255,255,255,210);
+border-radius:20px;
+</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Info Message&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="register_page">
+     <widget class="QPushButton" name="btn_rg_register">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>185</y>
+        <width>200</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#btn_rg_register{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(20, 47, 78, 219), stop:1 rgba(85, 98, 112, 226));
+	color:rgba(255, 255, 255, 210);
+	border-radius:5px;
+}
+QPushButton#btn_rg_register:hover{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(40, 67, 98, 219), stop:1 rgba(105, 118, 132, 226));
+}
+QPushButton#btn_rg_registern:pressed{
+	padding-left:5px;
+	padding-top:5px;
+	background-color:rgba(105, 118, 132, 200);
+}</string>
+      </property>
+      <property name="text">
+       <string>Register</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="line_rg_password">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>200</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(0,0,0,0);
+border:none;
+border-bottom:2px solid rgba(105,1118,132,255);
+color:rgba(255,255,255,230);
+padding-bottom:7px;</string>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>Password</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="line_rg_userName">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>200</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(0,0,0,0);
+border:none;
+border-bottom:2px solid rgba(105,1118,132,255);
+color:rgba(255,255,255,230);
+padding-bottom:7px;</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>User Name</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="line_rg_email">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>100</y>
+        <width>200</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(0,0,0,0);
+border:none;
+border-bottom:2px solid rgba(105,1118,132,255);
+color:rgba(255,255,255,230);
+padding-bottom:7px;</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>Email</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="line_rg_phone">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>140</y>
+        <width>200</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(0,0,0,0);
+border:none;
+border-bottom:2px solid rgba(105,1118,132,255);
+color:rgba(255,255,255,230);
+padding-bottom:7px;</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>Phone</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="btn_toggle_password">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>50</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#btn_toggle_password{
+	background-color: transparent;
+	color:rgba(255, 255, 255, 210);
+	border-radius:5px;
+}
+QPushButton#btn_toggle_password:hover{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.505682, x2:1, y2:0.477, stop:0 rgba(40, 67, 98, 219), stop:1 rgba(105, 118, 132, 226));
+}
+QPushButton#btn_toggle_password:pressed{
+	padding-left:5px;
+	padding-top:5px;
+	background-color:rgba(105, 118, 132, 200);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="Icons/login.qrc">
+      <normaloff>:/Icons/eye.svg</normaloff>:/Icons/eye.svg</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_lgn_login_2">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>90</y>
+      <width>141</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:rgba(255,255,255,210);
+border-radius:40px;
+</string>
+    </property>
+    <property name="text">
+     <string>Log In</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>btn_toggle_password</tabstop>
+  <tabstop>btn_minimize</tabstop>
+  <tabstop>btn_expand</tabstop>
+  <tabstop>btn_exit</tabstop>
+  <tabstop>line_lgn_userName</tabstop>
+  <tabstop>line_lgn_password</tabstop>
+  <tabstop>btn_lgn_login</tabstop>
+  <tabstop>btn_lgn_info</tabstop>
+  <tabstop>btn_lgn_register</tabstop>
+  <tabstop>btn_git</tabstop>
+  <tabstop>btn_linkedin</tabstop>
+  <tabstop>btn_email</tabstop>
+  <tabstop>btn_cv</tabstop>
+  <tabstop>btn_info_return</tabstop>
+  <tabstop>line_rg_userName</tabstop>
+  <tabstop>line_rg_password</tabstop>
+  <tabstop>line_rg_email</tabstop>
+  <tabstop>line_rg_phone</tabstop>
+  <tabstop>btn_rg_register</tabstop>
+ </tabstops>
+ <resources>
+  <include location="Icons/login.qrc"/>
+ </resources>
+ <connections/>
+</ui>
