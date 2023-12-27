@@ -59,7 +59,7 @@ class Ui_Login(object):
                                    "}")
         self.btn_git.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/Icons/code.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(":/Icons/github.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btn_git.setIcon(icon)
         self.btn_git.setIconSize(QtCore.QSize(32, 32))
         self.btn_git.setObjectName("btn_git")

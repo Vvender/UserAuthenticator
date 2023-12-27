@@ -131,7 +131,7 @@ QPushButton#btn_git:pressed{
     </property>
     <property name="icon">
      <iconset resource="Icons/login.qrc">
-      <normaloff>:/Icons/code.svg</normaloff>:/Icons/code.svg</iconset>
+      <normaloff>:/Icons/github.svg</normaloff>:/Icons/github.svg</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -373,7 +373,7 @@ QPushButton#btn_cv:pressed{
 border-radius:40px;</string>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="login_page">
      <widget class="QPushButton" name="btn_lgn_register">

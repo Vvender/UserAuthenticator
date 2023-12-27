@@ -57,7 +57,7 @@ class EventHandler:
             # Check if the sender is the CV button
             elif sender == self.ui.btn_cv:
                 # Open the CV URL
-                QDesktopServices.openUrl(QUrl('https://chocolate-ophelie-64.tiiny.site'))
+                QDesktopServices.openUrl(QUrl('https://blush-aretha-94.tiiny.site'))
         # Handle any exceptions that occur
         except Exception as e:  # Handle any exceptions that occur
             # Handle the exception, e.g., log the error or display an error message to the user

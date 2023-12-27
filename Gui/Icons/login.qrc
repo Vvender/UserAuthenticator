@@ -1,7 +1,7 @@
 <RCC>
   <qresource prefix="Icons">
-    <file>acces_granted.jpg</file>
     <file>chevron-down.svg</file>
+    <file>github.svg</file>
     <file>clipboard.svg</file>
     <file>code.svg</file>
     <file>eye.svg</file>
