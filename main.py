@@ -1,7 +1,8 @@
 import sys
 from PyQt5.QtCore import QTimer
 from PyQt5.QtWidgets import QApplication, QWidget
-from event_handler import EventHandler
+from EventHandler.main_event_handler import MainEventHandler
+from EventHandler.utility_event_handler import UtilityEventHandler
 from Gui.ui_login import Ui_Login
 
 
@@ -14,35 +15,33 @@ class MainWindow:
         self.ui_window.show()
 
         # Create an instance of EventHandler and pass the app and ui objects
-        self.event_handler = EventHandler(self.app, self.ui)
+        self.main_handler = MainEventHandler(self.app, self.ui)
+        self.utility_handler = UtilityEventHandler(self.app, self.ui)
 
         # Main Button Events
         self.ui.btn_minimize.clicked.connect(self.ui_window.showMinimized)
-        self.ui.btn_expand.clicked.connect(self.event_handler.main_event_handler)
+        self.ui.btn_expand.clicked.connect(self.utility_handler.utility_event_handler)
         self.ui.btn_exit.clicked.connect(self.app.quit)
-        self.ui.btn_toggle_password.clicked.connect(self.event_handler.main_event_handler)
-        self.ui.btn_git.clicked.connect(self.event_handler.main_event_handler)
-        self.ui.btn_linkedin.clicked.connect(self.event_handler.main_event_handler)
-        self.ui.btn_email.clicked.connect(self.event_handler.main_event_handler)
-        self.ui.btn_cv.clicked.connect(self.event_handler.main_event_handler)
-
-        # Mouse Press Events
-        # self.ui.lbl_frame_back.mousePressEvent()
+        self.ui.btn_git.clicked.connect(self.utility_handler.utility_event_handler)
+        self.ui.btn_linkedin.clicked.connect(self.utility_handler.utility_event_handler)
+        self.ui.btn_email.clicked.connect(self.utility_handler.utility_event_handler)
+        self.ui.btn_cv.clicked.connect(self.utility_handler.utility_event_handler)
 
         # Login Button Events
-        self.ui.btn_lgn_login.clicked.connect(self.event_handler.login_event_handler)
-        self.ui.btn_lgn_info.clicked.connect(self.event_handler.login_event_handler)
-        self.ui.btn_lgn_register.clicked.connect(self.event_handler.login_event_handler)
+        self.ui.btn_toggle_password.clicked.connect(self.main_handler.toggle_password)
+        self.ui.btn_lgn_login.clicked.connect(self.main_handler.login_event_handler)
+        self.ui.btn_lgn_info.clicked.connect(self.main_handler.login_event_handler)
+        self.ui.btn_lgn_register.clicked.connect(self.main_handler.login_event_handler)
 
         # Register Button Events
-        self.ui.btn_rg_register.clicked.connect(self.event_handler.register_event_handler)
+        self.ui.btn_rg_register.clicked.connect(self.main_handler.register_event_handler)
 
         # Message Button Events
-        self.ui.btn_info_return.clicked.connect(self.event_handler.message_event_handler)
+        self.ui.btn_info_return.clicked.connect(self.main_handler.message_event_handler)
 
         # Countdown Event
-        self.event_handler.countdown_timer = QTimer()
-        self.event_handler.countdown_timer.timeout.connect(self.event_handler.update_countdown_label)
+        self.main_handler.countdown_timer = QTimer()
+        self.main_handler.countdown_timer.timeout.connect(self.main_handler.update_countdown_label)
 
 
 if __name__ == "__main__":

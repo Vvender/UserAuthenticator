@@ -1,12 +1,8 @@
-import webbrowser
-from PyQt5.QtCore import QUrl
-from PyQt5.QtGui import QDesktopServices
 from PyQt5.QtWidgets import QLineEdit
-
 import Database.db_authentication as authentication
 
 
-class EventHandler:
+class MainEventHandler:
     def __init__(self, app, ui):
         self.app = app
         self.ui = ui
@@ -17,11 +13,11 @@ class EventHandler:
         self.countdown_timer = None
         self.failed_login_attempts = 0
         self.remaining_attempts = 3
+        print("a")
 
-    def main_event_handler(self):
+    def toggle_password(self):
+        sender = self.app.sender()  # Get the sender of the event
         try:
-            # Get the sender of the event
-            sender = self.app.sender()
             # Check if the sender is the toggle password button
             if sender == self.ui.btn_toggle_password:
                 # Check if the current page is the login page
@@ -42,31 +38,14 @@ class EventHandler:
                     else:
                         # Change the password line edit to password mode
                         self.ui.line_rg_password.setEchoMode(QLineEdit.Password)
-            # Check if the sender is the GitHub button
-            elif sender == self.ui.btn_git:
-                # Open the GitHub URL
-                QDesktopServices.openUrl(QUrl('https://github.com/Vvender'))
-            # Check if the sender is the LinkedIn button
-            elif sender == self.ui.btn_linkedin:
-                # Open the LinkedIn URL
-                QDesktopServices.openUrl(QUrl('https://www.linkedin.com/in/ozan-çatak-06a35a162/'))
-            # Check if the sender is the email button
-            elif sender == self.ui.btn_email:
-                # Open the default email client with the specified email address
-                webbrowser.open('mailto:ozancatak@hotmail.com')
-            # Check if the sender is the CV button
-            elif sender == self.ui.btn_cv:
-                # Open the CV URL
-                QDesktopServices.openUrl(QUrl('https://blush-aretha-94.tiiny.site'))
-        # Handle any exceptions that occur
         except Exception as e:  # Handle any exceptions that occur
             # Handle the exception, e.g., log the error or display an error message to the user
-            print(f"An error occurred during main event: {e}")  # Print the error message
+            print(f"An error occurred during toggle password event: {e}")  # Print the error message
 
     def login_event_handler(self):
         try:
             sender = self.app.sender()  # Get the sender of the event
-            self.previous_page = 0  # Set the previous page to 0
+            self.ui.previous_page = 0  # Set the previous page to 0
             if sender == self.ui.btn_lgn_login:  # Check if the sender is the login button
                 # Check if login is not disabled due to multiple failed attempts
                 if not self.login_disabled:
