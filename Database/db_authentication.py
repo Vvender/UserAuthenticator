@@ -1,4 +1,5 @@
 import pyodbc
+from ExceptionHanlder.exception_handler import CustomExceptionHandler
 
 
 class UserDatabase:
@@ -23,7 +24,8 @@ class UserDatabase:
             self.cursor = self.connection.cursor()
 
         except Exception as e:
-            print(f"Error connecting to the database: {str(e)}")
+            custom_exception = CustomExceptionHandler(e)
+            print(f"Error connecting to the database,Error Code: {custom_exception.error_code}, Message: {custom_exception.error_message}")
             self.close_connection()
 
     def close_connection(self):
@@ -34,7 +36,8 @@ class UserDatabase:
             if self.connection:
                 self.connection.close()
         except Exception as e:
-            print(f"Error closing connection: {str(e)}")
+            custom_exception = CustomExceptionHandler(e)
+            print(f"Error closing connection,Error Code: {custom_exception.error_code}, Message: {custom_exception.error_message}")
 
     def check_initial_setup(self):
         try:
@@ -49,7 +52,8 @@ class UserDatabase:
                 print("Database already exists; no further action is necessary.")
 
         except Exception as e:
-            print(f"Error checking initial setup: {str(e)}")
+            custom_exception = CustomExceptionHandler(e)
+            print(f"Error checking initial setup,Error Code: {custom_exception.error_code}, Message: {custom_exception.error_message}")
 
     def create_initial_setup(self):
         try:
@@ -85,13 +89,15 @@ class UserDatabase:
                 print("Initial admin user inserted.")
             except Exception as e:
                 # Handle the exception for duplicate key
-                print(f"Initial admin user already exists: {str(e)}")
+                custom_exception = CustomExceptionHandler(e)
+                print(f"Initial admin user already exists,Error Code: {custom_exception.error_code}, Message: {custom_exception.error_message}")
 
             # Commit the changes to persist them
             self.connection.commit()
 
         except Exception as e:
-            print(f"Error creating initial setup: {str(e)}")
+            custom_exception = CustomExceptionHandler(e)
+            print(f"Error creating initial setup,Error Code: {custom_exception.error_code}, Message: {custom_exception.error_message}")
         finally:
             self.close_connection()
 
@@ -110,10 +116,12 @@ class UserDatabase:
                     return False
 
             except Exception as e:
-                print(f"Error during cursor operation: {str(e)}")
+                custom_exception = CustomExceptionHandler(e)
+                print(f"Error during cursor operation,Error Code: {custom_exception.error_code}, Message: {custom_exception.error_message}")
 
         except Exception as e:
-            print(f"Error authenticating user: {str(e)}")
+            custom_exception = CustomExceptionHandler(e)
+            print(f"Error authenticating user,Error Code: {custom_exception.error_code}, Message: {custom_exception.error_message}")
 
     def add_user(self, username, user_password, phone, email):
         try:
@@ -142,7 +150,8 @@ class UserDatabase:
             return 0  # Return 0 for successful insertion
 
         except Exception as e:
-            print(f"Error adding user: {str(e)}")
+            custom_exception = CustomExceptionHandler(e)
+            print(f"Error adding user,Error Code: {custom_exception.error_code}, Message: {custom_exception.error_message}")
             return 3  # Return 3 for general error
 
         finally:

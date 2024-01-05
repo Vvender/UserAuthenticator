@@ -1,5 +1,6 @@
 from PyQt5.QtWidgets import QLineEdit
 import Database.db_authentication as authentication
+from ExceptionHanlder.exception_handler import CustomExceptionHandler
 
 
 class MainEventHandler:
@@ -13,7 +14,6 @@ class MainEventHandler:
         self.countdown_timer = None
         self.failed_login_attempts = 0
         self.remaining_attempts = 3
-        print("a")
 
     def toggle_password(self):
         sender = self.app.sender()  # Get the sender of the event
@@ -38,9 +38,9 @@ class MainEventHandler:
                     else:
                         # Change the password line edit to password mode
                         self.ui.line_rg_password.setEchoMode(QLineEdit.Password)
-        except Exception as e:  # Handle any exceptions that occur
-            # Handle the exception, e.g., log the error or display an error message to the user
-            print(f"An error occurred during toggle password event: {e}")  # Print the error message
+        except Exception as e:
+            custom_exception = CustomExceptionHandler(e)
+            print(f"An error occurred during toggle password event,Error Code: {custom_exception.error_code}, Message: {custom_exception.error_message}")
 
     def login_event_handler(self):
         try:
@@ -79,9 +79,9 @@ class MainEventHandler:
             elif sender == self.ui.btn_lgn_register:  # Check if the sender is the register button
                 self.ui.pages.setCurrentIndex(2)  # Set the current page index to 2
                 self.update_header()  # Update the header
-        except Exception as e:  # Handle any exceptions that occur
-            # Handle the exception, e.g., log the error or display an error message to the user
-            print(f"An error occurred during login event: {e}")  # Print the error message
+        except Exception as e:
+            custom_exception = CustomExceptionHandler(e)
+            print(f"An error occurred during login event,Error Code: {custom_exception.error_code}, Message: {custom_exception.error_message}")
 
     def message_event_handler(self):
         try:
@@ -101,9 +101,9 @@ class MainEventHandler:
                     # Show the login window
                     self.ui.pages.setCurrentIndex(2)
                     self.update_header()
-        except Exception as e:  # Handle any exceptions that occur
-            # Handle the exception, e.g., log the error or display an error message to the user
-            print(f"An error occurred during message event handler: {e}")  # Print the error message
+        except Exception as e:
+            custom_exception = CustomExceptionHandler(e)
+            print(f"An error occurred during message event handler,Error Code: {custom_exception.error_code}, Message: {custom_exception.error_message}")
 
     def register_event_handler(self):
         try:
@@ -130,9 +130,9 @@ class MainEventHandler:
                     self.ui.lbl_info_message.setText("An error occurred")  # Set the info message
                     print("An Result Error Occurred")  # Print an error message
                     print(result)  # Print the result
-        except Exception as e:  # Handle any exceptions that occur
-            # Handle the exception, e.g., log the error or display an error message to the user
-            print("An error occurred during register event: " + str(e))  # Print the exception message
+        except Exception as e:
+            custom_exception = CustomExceptionHandler(e)
+            print(f"An error occurred during register event,Error Code: {custom_exception.error_code}, Message: {custom_exception.error_message}")
 
     def update_countdown_label(self):
         try:
@@ -148,9 +148,9 @@ class MainEventHandler:
                 self.ui.lbl_info_message.setText(
                     "You can try again.")  # Set the label text to indicate the user can try again
                 self.ui.btn_info_return.show()  # Show the return button
-        except Exception as e:  # Handle any exceptions that occur
-            # Handle the exception, e.g., log the error or display an error message to the user
-            print("An error occurred during countdown update event: " + str(e))  # Print the exception message
+        except Exception as e:
+            custom_exception = CustomExceptionHandler(e)
+            print(f"An error occurred during countdown update event,Error Code: {custom_exception.error_code}, Message: {custom_exception.error_message}")
 
     def clear_text(self):
         try:
@@ -164,9 +164,9 @@ class MainEventHandler:
                 self.ui.line_rg_phone.setText("")
             else:
                 pass  # Do nothing if the previous page is not 0
-        except Exception as e:  # Handle any exceptions that occur
-            # Handle the exception, e.g., log the error or display an error message to the user
-            print("An error occurred during clear text event: " + str(e))  # Print the exception message
+        except Exception as e:
+            custom_exception = CustomExceptionHandler(e)
+            print(f"An error occurred during clear text event,Error Code: {custom_exception.error_code}, Message: {custom_exception.error_message}")
 
     def update_header(self):
         try:
@@ -178,15 +178,15 @@ class MainEventHandler:
                 self.ui.lbl_login.setText("Register")  # Update the header label to indicate registration
             else:
                 self.ui.lbl_login.setText("Info")  # Update the header label to indicate info page
-        except Exception as e:  # Handle any exceptions that occur
-            # Handle the exception, e.g., log the error or display an error message to the user
-            print("An error occurred during update header event: " + str(e))  # Print the exception message
+        except Exception as e:
+            custom_exception = CustomExceptionHandler(e)
+            print(f"An error occurred during update header event,Error Code: {custom_exception.error_code}, Message: {custom_exception.error_message}")
 
     def reset_attempts(self):
         try:
             # Reset the login attempts and remaining attempts
             self.failed_login_attempts = 0  # Reset the failed login attempts
             self.remaining_attempts = 3  # Reset the remaining attempts
-        except Exception as e:  # Handle any exceptions that occur
-            # Handle the exception, e.g., log the error or display an error message to the user
-            print("An error occurred during reset attempts event: " + str(e))  # Print the exception message
+        except Exception as e:
+            custom_exception = CustomExceptionHandler(e)
+            print(f"An error occurred during reset attempts event,Error Code: {custom_exception.error_code}, Message: {custom_exception.error_message}")

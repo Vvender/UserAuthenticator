@@ -29,6 +29,6 @@ class UtilityEventHandler:
                 # Open the CV URL
                 QDesktopServices.openUrl(QUrl('https://blush-aretha-94.tiiny.site'))
         # Handle any exceptions that occur
-        except Exception as e:  # Handle any exceptions that occur
-            # Handle the exception, e.g., log the error or display an error message to the user
-            print(f"An error occurred during main event: {e}")  # Print the error message
+        except Exception as e:
+            custom_exception = CustomExceptionHandler(e)
+            print(f"An error occurred during utility event,Error Code: {custom_exception.error_code}, Message: {custom_exception.error_message}")
