@@ -21,8 +21,3 @@ class CustomExceptionHandler(Exception):
         error_code = error_code_mapping.get(type(e), 499)  # Default error code
         error_message = str(e)  # Use the exception message as the error message
         return error_code, error_message
-
-
-
-
-
