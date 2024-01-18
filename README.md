@@ -1,13 +1,25 @@
-User Authentication and Management System
+User Authenticator
+A secure PyQt-based user authentication system in Python. Provides login, registration, and info features. Utilizes SQL Server for database management, with automatic setup, table creation, and initial data insertion. Integrated utility functions for quick access to GitHub, LinkedIn, email, and CV.
 
-This project is a user authentication and management system with a graphical user interface designed using QT Designer. 
-It provides the following features:
+Features
 
-Checks for the existence of a user database and creates one if none is found.
-Allows users to log in with a username and password, implementing a lockout mechanism after three failed attempts.
-Includes a registration function with validation to prevent duplicate or incomplete entries.
-Features buttons to connect to GitHub, LinkedIn, open an Outlook mail, and access a personal CV.
+User-friendly GUI for login, registration, and information display.
+Secure authentication with SQL Server backend.
+Automatic setup: checks and creates the necessary database, tables, and initial data.
+Error handling and logging for robust application behavior.
+Utility functions for quick access to the developer's GitHub, LinkedIn, email, and CV.
+Usage
 
-The GUI was designed in QT Designer, and the program utilizes PyQt5 for GUI development and SQL Server Management Studio for database operations. It also integrates web and email functionalities.
+Install Python and required dependencies.
+Run main.py to launch the application.
+Navigate through login, registration, and info features.
+Access utility functions for additional information.
+Requirements
 
-Warning: Please note that the server name in the authentication page should be changed according to the user's server.
+Python: 3.6 or higher
+PyQt5: Installation guide included
+Microsoft SQL Server
+License
+This project is licensed under the MIT License.
+
+Feel free to explore, contribute, or use this code as a reference for your own projects. If you have any questions or issues, please open an issue.
